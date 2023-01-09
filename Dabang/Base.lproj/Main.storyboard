@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Room ListVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RoomListVC" customModule="Dabang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SOp-xc-So8" userLabel="Stack Filter">
+                                <rect key="frame" x="16" y="69" width="361" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UhL-WL-TDw" userLabel="Stack Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방 종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGD-17-MOi">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9E8-rd-2Xb" userLabel="Stack Btns">
+                                                <rect key="frame" x="0.0" y="27" width="256" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKh-dT-Dnh" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="36"/>
+                                                        <color key="backgroundColor" name="4383FF"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="원룸">
+                                                            <color key="titleColor" name="444444"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="DDDDDD"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                <color key="value" name="4383FF"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="roomTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pj0-B4-81t"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEH-Hi-eiz" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="67" height="36"/>
+                                                        <color key="backgroundColor" name="4383FF"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="투쓰리룸">
+                                                            <color key="titleColor" name="444444"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="DDDDDD"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                <color key="value" name="4383FF"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="roomTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSI-xr-TTt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-ag-Uid" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                        <rect key="frame" x="126" y="0.0" width="67" height="36"/>
+                                                        <color key="backgroundColor" name="4383FF"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="오피스텔">
+                                                            <color key="titleColor" name="444444"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="DDDDDD"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                <color key="value" name="4383FF"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="roomTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPw-lk-A6G"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap1-rY-amD" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                        <rect key="frame" x="201" y="0.0" width="55" height="36"/>
+                                                        <color key="backgroundColor" name="4383FF"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="아파트">
+                                                            <color key="titleColor" name="444444"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="DDDDDD"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                <color key="value" name="4383FF"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="roomTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXD-Y9-TUX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="qEM-jI-sBo"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="sQi-v5-LSI" userLabel="Stack Bottom">
+                                        <rect key="frame" x="0.0" y="77" width="245" height="63"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qVn-ha-Bfw" userLabel="Stack Left">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매물 종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsW-NB-hOj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-7M-5M4" userLabel="Stack Btns">
+                                                        <rect key="frame" x="0.0" y="27" width="145" height="36"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdP-ke-aXN" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="36"/>
+                                                                <color key="backgroundColor" name="4383FF"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="월세">
+                                                                    <color key="titleColor" name="444444"/>
+                                                                </state>
+                                                                <state key="selected">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="DDDDDD"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                        <color key="value" name="4383FF"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="sellingTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dci-Jy-i0z"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io3-OS-Ky8" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                                <rect key="frame" x="51" y="0.0" width="43" height="36"/>
+                                                                <color key="backgroundColor" name="4383FF"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="전세">
+                                                                    <color key="titleColor" name="444444"/>
+                                                                </state>
+                                                                <state key="selected">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="DDDDDD"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                        <color key="value" name="4383FF"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="sellingTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJ3-qz-8EV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlx-qJ-w8P" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                                <rect key="frame" x="102" y="0.0" width="43" height="36"/>
+                                                                <color key="backgroundColor" name="4383FF"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="매매">
+                                                                    <color key="titleColor" name="444444"/>
+                                                                </state>
+                                                                <state key="selected">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="DDDDDD"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                        <color key="value" name="4383FF"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="sellingTypeBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Am3-JZ-hrl"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="LYT-QA-QtJ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EE7-Gl-MVU" userLabel="Stack Right">
+                                                <rect key="frame" x="178" y="0.0" width="67" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s4-YB-a1v">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILl-Sw-1aN" customClass="SelectButton" customModule="Dabang" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="67" height="36"/>
+                                                        <color key="backgroundColor" name="4383FF"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="contentEdgeInsets" minX="9" minY="0.0" maxX="9" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="내림차순">
+                                                            <color key="titleColor" name="444444"/>
+                                                        </state>
+                                                        <state key="selected" title="오름차순">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="DDDDDD"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectColor">
+                                                                <color key="value" name="4383FF"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="priceBtnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5Z-iP-M7n"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmI-Zm-LDy" userLabel="View Line">
+                                <rect key="frame" x="0.0" y="229" width="393" height="8"/>
+                                <color key="backgroundColor" name="F0F0F0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="j9u-nH-USP"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aDe-J8-3tR">
+                                <rect key="frame" x="0.0" y="237" width="393" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RoomTvCell" rowHeight="195" id="tga-7r-y1M" customClass="RoomTvCell" customModule="Dabang" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="195"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tga-7r-y1M" id="yvG-Ng-amB">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="195"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="98l-dQ-U6n" userLabel="Stack Root">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="195"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="p0m-ze-fHe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="114"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="C7J-YG-law" userLabel="Stack Lbls">
+                                                                    <rect key="frame" x="16" y="16" width="204" height="82"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="746" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-Ri-ez3">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="21.666666666666668"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="747" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgy-dc-Y3R">
+                                                                            <rect key="frame" x="0.0" y="23.666666666666664" width="33" height="15.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6L-GZ-HXY">
+                                                                            <rect key="frame" x="0.0" y="41.333333333333336" width="33" height="15.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                            <color key="textColor" name="888888"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="g2S-dp-HFw" userLabel="Stack Hashtags">
+                                                                            <rect key="frame" x="0.0" y="59" width="168" height="23"/>
+                                                                            <subviews>
+                                                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaW-02-Pku">
+                                                                                    <rect key="frame" x="0.0" y="3" width="39" height="20"/>
+                                                                                    <color key="backgroundColor" name="F4F4F4"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="20" id="iuC-sz-CAk"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" title="Button">
+                                                                                        <color key="titleColor" name="888888"/>
+                                                                                    </state>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                            <real key="value" value="2"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </button>
+                                                                                <button opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu8-Lg-Bn2">
+                                                                                    <rect key="frame" x="43" y="3" width="39" height="20"/>
+                                                                                    <color key="backgroundColor" name="F4F4F4"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="20" id="FbX-qI-U97"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" title="Button">
+                                                                                        <color key="titleColor" name="888888"/>
+                                                                                    </state>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                            <real key="value" value="2"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </button>
+                                                                                <button opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbX-bq-DlB">
+                                                                                    <rect key="frame" x="86" y="3" width="39" height="20"/>
+                                                                                    <color key="backgroundColor" name="F4F4F4"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="20" id="kXm-2p-XlK"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" title="Button">
+                                                                                        <color key="titleColor" name="888888"/>
+                                                                                    </state>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                            <real key="value" value="2"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </button>
+                                                                                <button opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-vg-Nyh">
+                                                                                    <rect key="frame" x="129" y="3" width="39" height="20"/>
+                                                                                    <color key="backgroundColor" name="F4F4F4"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="20" id="462-om-plz"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                    <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" title="Button">
+                                                                                        <color key="titleColor" name="888888"/>
+                                                                                    </state>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                            <real key="value" value="2"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </button>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="23" id="ZoH-7A-Ilq"/>
+                                                                            </constraints>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mm3-Je-DGF" userLabel="View Imgs">
+                                                                    <rect key="frame" x="254" y="16" width="123" height="82"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rzf-Bd-MIG">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="123" height="82"/>
+                                                                            <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="4"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-vV-JOa">
+                                                                            <rect key="frame" x="6" y="6" width="18" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="i2n-LR-Vjl"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbi-Ci-bp2">
+                                                                            <rect key="frame" x="100" y="6" width="18" height="18"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="18" id="JQP-DH-f4Y"/>
+                                                                                <constraint firstAttribute="width" secondItem="cbi-Ci-bp2" secondAttribute="height" id="Kev-B0-QnQ"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="rzf-Bd-MIG" secondAttribute="trailing" id="5TE-eD-upf"/>
+                                                                        <constraint firstItem="cbi-Ci-bp2" firstAttribute="top" secondItem="Mm3-Je-DGF" secondAttribute="top" constant="6" id="5vH-Hy-I4V"/>
+                                                                        <constraint firstItem="rzf-Bd-MIG" firstAttribute="top" secondItem="Mm3-Je-DGF" secondAttribute="top" id="B9y-aO-R8T"/>
+                                                                        <constraint firstAttribute="width" secondItem="Mm3-Je-DGF" secondAttribute="height" multiplier="126:84" id="WOL-C1-aHZ"/>
+                                                                        <constraint firstItem="rzf-Bd-MIG" firstAttribute="leading" secondItem="Mm3-Je-DGF" secondAttribute="leading" id="XYO-gR-vcB"/>
+                                                                        <constraint firstItem="UwE-vV-JOa" firstAttribute="width" secondItem="UwE-vV-JOa" secondAttribute="height" id="Z9M-ur-GAx"/>
+                                                                        <constraint firstItem="UwE-vV-JOa" firstAttribute="leading" secondItem="Mm3-Je-DGF" secondAttribute="leading" constant="6" id="kDo-Kp-bCf"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="rzf-Bd-MIG" secondAttribute="bottom" id="ofr-y4-U1g"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="cbi-Ci-bp2" secondAttribute="trailing" constant="5" id="otR-yc-4Ph"/>
+                                                                        <constraint firstItem="UwE-vV-JOa" firstAttribute="top" secondItem="Mm3-Je-DGF" secondAttribute="top" constant="6" id="wEm-pb-4at"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="114" id="0k9-uc-V0c"/>
+                                                            </constraints>
+                                                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouf-ib-1YK" userLabel="View Line">
+                                                            <rect key="frame" x="0.0" y="114" width="393" height="1"/>
+                                                            <color key="backgroundColor" name="EDEDED"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="nzh-Q4-9d0"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p1I-pk-UUz">
+                                                            <rect key="frame" x="0.0" y="115" width="393" height="80"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-D8-QWv" userLabel="Stack Contents">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fff-eV-6rt" userLabel="Stack Left">
+                                                                            <rect key="frame" x="15" y="9.9999999999999964" width="68" height="61.666666666666657"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="평균 매물가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0w-ih-GlZ">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="17"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="17" id="rMb-9M-4kB"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7ci-Lp-PYz" userLabel="Stack Month Price">
+                                                                                    <rect key="frame" x="0.0" y="24.999999999999996" width="55" height="36.666666666666657"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평균월세" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiF-Ai-fRF">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="13.333333333333334"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHn-el-lXj">
+                                                                                            <rect key="frame" x="0.0" y="17.333333333333343" width="55" height="19.333333333333329"/>
+                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                            <color key="textColor" name="3C7DFA"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="13"/>
+                                                                        </stackView>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yw-zt-vHs" userLabel="View Line">
+                                                                            <rect key="frame" x="83" y="10" width="1" height="69"/>
+                                                                            <subviews>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-SH-COQ" userLabel="View 1">
+                                                                                    <rect key="frame" x="0.0" y="24.999999999999996" width="1" height="36.666666666666657"/>
+                                                                                    <color key="backgroundColor" name="C4C4C4"/>
+                                                                                </view>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="1" id="0qM-9I-9tH"/>
+                                                                                <constraint firstItem="UI6-SH-COQ" firstAttribute="leading" secondItem="8Yw-zt-vHs" secondAttribute="leading" id="Yiq-16-iuk"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="UI6-SH-COQ" secondAttribute="trailing" id="eXF-5o-hHR"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8E8-2w-PNR" userLabel="Stack Right">
+                                                                            <rect key="frame" x="84" y="9.9999999999999964" width="294" height="61.666666666666657"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2B-4I-5Y0">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="17"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="17" id="sVk-Of-C0Y"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                                    <color key="textColor" name="888888"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="phT-FA-udF" userLabel="Stack Year Price">
+                                                                                    <rect key="frame" x="0.0" y="24.999999999999996" width="294" height="36.666666666666657"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평균전세" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnM-mc-8ef">
+                                                                                            <rect key="frame" x="13" y="0.0" width="281" height="13.333333333333334"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1B-Ay-FYh">
+                                                                                            <rect key="frame" x="13" y="17.333333333333343" width="281" height="19.333333333333329"/>
+                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                            <color key="textColor" name="FF8A00"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                    <edgeInsets key="layoutMargins" top="0.0" left="13" bottom="0.0" right="0.0"/>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="UI6-SH-COQ" firstAttribute="centerY" secondItem="7ci-Lp-PYz" secondAttribute="centerY" id="NcJ-KC-BpE"/>
+                                                                        <constraint firstItem="UI6-SH-COQ" firstAttribute="height" secondItem="7ci-Lp-PYz" secondAttribute="height" id="nZK-FQ-5ui"/>
+                                                                    </constraints>
+                                                                    <edgeInsets key="layoutMargins" top="10" left="15" bottom="0.0" right="15"/>
+                                                                </stackView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32b-3a-HEG" userLabel="View Line">
+                                                                    <rect key="frame" x="0.0" y="79" width="393" height="1"/>
+                                                                    <color key="backgroundColor" name="EDEDED"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="HAx-bW-jsP"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="F1F8FF"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="ecK-xb-lAy"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="98l-dQ-U6n" secondAttribute="trailing" id="7go-Rc-qzK"/>
+                                                <constraint firstAttribute="bottom" secondItem="98l-dQ-U6n" secondAttribute="bottom" priority="999" id="Bu6-6G-8sY"/>
+                                                <constraint firstItem="98l-dQ-U6n" firstAttribute="top" secondItem="yvG-Ng-amB" secondAttribute="top" id="b8v-y9-qfA"/>
+                                                <constraint firstItem="98l-dQ-U6n" firstAttribute="leading" secondItem="yvG-Ng-amB" secondAttribute="leading" id="bgy-MT-0iG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivStarLeft" destination="UwE-vV-JOa" id="FJQ-0f-JUF"/>
+                                            <outlet property="ivStarRight" destination="cbi-Ci-bp2" id="aQM-ig-z7t"/>
+                                            <outlet property="ivThumbnail" destination="rzf-Bd-MIG" id="sMx-rl-87q"/>
+                                            <outlet property="lblAverageName" destination="I2B-4I-5Y0" id="dUl-SE-HSZ"/>
+                                            <outlet property="lblDescription" destination="L6L-GZ-HXY" id="CmU-A1-jFg"/>
+                                            <outlet property="lblMonthPrice" destination="sHn-el-lXj" id="sqz-6L-A4M"/>
+                                            <outlet property="lblRoomType" destination="Bgy-dc-Y3R" id="p6U-Ki-v1z"/>
+                                            <outlet property="lblTitle" destination="Mgm-Ri-ez3" id="3Xb-lM-1Mo"/>
+                                            <outlet property="lblYearPrice" destination="t1B-Ay-FYh" id="OEW-bY-zTO"/>
+                                            <outlet property="stackAverage" destination="p1I-pk-UUz" id="SgG-Ev-8vZ"/>
+                                            <outlet property="stackContents" destination="p0m-ze-fHe" id="keu-Wx-btW"/>
+                                            <outlet property="stackLbls" destination="C7J-YG-law" id="Rcq-VW-P37"/>
+                                            <outlet property="viewImgs" destination="Mm3-Je-DGF" id="orC-iF-Xqe"/>
+                                            <outletCollection property="btnsHashtag" destination="VaW-02-Pku" collectionClass="NSMutableArray" id="Ugg-ed-kaz"/>
+                                            <outletCollection property="btnsHashtag" destination="fu8-Lg-Bn2" collectionClass="NSMutableArray" id="K9t-Up-cgF"/>
+                                            <outletCollection property="btnsHashtag" destination="XbX-bq-DlB" collectionClass="NSMutableArray" id="Ekl-L9-wze"/>
+                                            <outletCollection property="btnsHashtag" destination="Fgg-vg-Nyh" collectionClass="NSMutableArray" id="s2M-at-0lg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RSl-Xh-D0f"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gkp-co-syW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.99824440479278564" blue="0.99531155824661255" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aDe-J8-3tR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2IA-gA-3F4"/>
+                            <constraint firstItem="bmI-Zm-LDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5aA-wd-Pgx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aDe-J8-3tR" secondAttribute="trailing" id="JhF-E3-OdI"/>
+                            <constraint firstItem="aDe-J8-3tR" firstAttribute="top" secondItem="bmI-Zm-LDy" secondAttribute="bottom" id="R2g-hY-uQI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bmI-Zm-LDy" secondAttribute="trailing" id="Sfj-bq-toe"/>
+                            <constraint firstItem="bmI-Zm-LDy" firstAttribute="top" secondItem="SOp-xc-So8" secondAttribute="bottom" constant="20" id="SoE-vF-W50"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SOp-xc-So8" secondAttribute="trailing" constant="16" id="c27-I7-iiP"/>
+                            <constraint firstAttribute="bottom" secondItem="aDe-J8-3tR" secondAttribute="bottom" id="cmv-PX-ReA"/>
+                            <constraint firstItem="SOp-xc-So8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qcm-Wy-6wc"/>
+                            <constraint firstItem="SOp-xc-So8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="y4z-0n-00u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aDe-J8-3tR" id="Xnz-TJ-a8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37.404580152671755" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="3C7DFA">
+            <color red="0.23529411764705882" green="0.49019607843137253" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="4383FF">
+            <color red="0.2627450980392157" green="0.51372549019607838" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="444444">
+            <color red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="888888">
+            <color red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="C4C4C4">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DDDDDD">
+            <color red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EDEDED">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F0F0F0">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F1F8FF">
+            <color red="0.94509803921568625" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F4F4F4">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FF8A00">
+            <color red="1" green="0.54117647058823526" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
